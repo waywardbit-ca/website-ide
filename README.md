@@ -11,10 +11,16 @@ Setup configuration for a [Docker](https://www.docker.com/) self-hosted [(linuxs
 Upon accessing the code server, use the integrated terminal to create new SSH keys for this instance in it's configuration location:
 
 ```
-ssh-keygen -t ed25519 -C "your_email@example.com" -f ../.ssh/github
+ssh-keygen -t ed25519 -C "your_email@example.com" -f ../.ssh/id_ed25519
 ```
 
-Once generated, copy the contents of the public key (`../.ssh/github.pub`) and add them to your [GitHub](https://github.com/) account.
+Once generated, copy the contents of the public key (`../.ssh/id_ed25519.pub`) and add them to your [GitHub](https://github.com/) account.
+
+The connection to [GitHub](https://github.com/) may be tested with the following command:
+
+```
+ssh -vT git@github.com
+```
 
 ## Git Credentials
 
